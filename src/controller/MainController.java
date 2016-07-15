@@ -79,11 +79,11 @@ public class MainController
     while (cur.y >= 0)
     {
       if ((cur.x == playerLocation.x) && (cur.y == playerLocation.y)) {
-        line = line + "@";
+        line = line + player.symbol;
       } else if ((cur.x == ((Location)chaserLocations.get(0)).x) && (cur.y == ((Location)chaserLocations.get(0)).y)) {
-        line = line + "X";
+        line = line + chasers.get(0).symbol;
       } else if ((cur.x == golLocation.x) && (cur.y == golLocation.y)) {
-        line = line + "o";
+        line = line + gol.symbol;
       } else {
         line = line + "-";
       }

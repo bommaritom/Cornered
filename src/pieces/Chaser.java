@@ -12,7 +12,7 @@ public class Chaser
   
   public Chaser(int xx, int yy)
   {
-    this.symbol = "X";
+    this.symbol = "x";
     
     this.x = xx;
     this.y = yy;
@@ -23,11 +23,13 @@ public class Chaser
   
   public void move(Player player)
   {
+	this.symbol = "x";
     this.tick += 1;
     this.diffx = (player.x - this.x);
     this.diffy = (player.y - this.y);
     if (this.tick == 2)
     {
+      this.symbol = "X";
       if (Math.abs(this.diffx) > Math.abs(this.diffy))
       {
         if (this.diffx > 0) {
